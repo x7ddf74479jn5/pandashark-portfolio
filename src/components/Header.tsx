@@ -25,8 +25,8 @@ export const Header = ({ socials }: Props) => {
         }}
         className="flex flex-row items-center"
       >
-        {socials.map(({ name, link }) => (
-          <SocialIcon key={name} className="cursor-pointer" url={link} fgColor="gray" bgColor="transparent" />
+        {socials.map(({ name, url }) => (
+          <SocialIcon key={name} className="cursor-pointer" url={url} fgColor="gray" bgColor="transparent" />
         ))}
       </motion.div>
 

@@ -40,7 +40,7 @@ export const ExperienceCard = ({ experience }: Props) => {
         </div>
         <p className="uppercase py-5 text-gray-300">
           {new Date(experience.dateStarted).toDateString()} -{" "}
-          {experience.isCurrentlyWorking ? "Present" : new Date(experience.dateEnd).toDateString()}
+          {experience.current ? "Present" : new Date(experience.dateEnd).toDateString()}
         </p>
 
         <ul className="list-disc space-y-4 ml-5 text-lg max-h-96 pr-5 overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#F7AB0A]/80">

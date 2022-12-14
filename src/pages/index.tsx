@@ -1,8 +1,5 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
-import fs from "node:fs";
-import path from "node:path";
 
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
@@ -12,6 +9,8 @@ import { Skills } from "@/components/Skills";
 import { Projects } from "@/components/Projects";
 import { ContactMe } from "@/components/ContactMe";
 import { Footer } from "@/components/Footer";
+import { client } from "@/lib/microcms";
+import { Experience, PageInfo, ProfileResponse, Project, Skill, Social, Technology } from "@/types";
 
 type Props = {
   skills: Skill[];
@@ -62,21 +61,27 @@ const Home: NextPage<Props> = ({ pageInfo, skills, experiences, projects, social
 };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const contentJsonPath = path.join(process.cwd(), "contents.json");
-  const data = JSON.parse(fs.readFileSync(contentJsonPath, "utf8"));
-  const pageInfo: PageInfo = data["pageInfo"];
-  const skills: Skill[] = data["skills"];
-  const experiences: Experience[] = data["experiences"];
-  const projects: Project[] = data["projects"];
-  const socials: Social[] = data["socials"];
+  const profileResponse = await client.getObject<ProfileResponse>({ endpoint: "profile" });
+  const technologiesResponse = await client.getList<Technology>({ endpoint: "technologies" });
+
+  const pageInfo: PageInfo = {
+    background: profileResponse.background,
+    email: profileResponse.email,
+    role: profileResponse.role,
+    heroImage: { title: profileResponse.name, url: profileResponse.image.url },
+    name: profileResponse.name,
+    profilePic: { title: profileResponse.name, url: profileResponse.image.url },
+    createdAt: profileResponse.createdAt,
+    updatedAt: profileResponse.updatedAt,
+  };
 
   return {
     props: {
-      skills,
       pageInfo,
-      experiences,
-      projects,
-      socials,
+      skills: technologiesResponse.contents,
+      projects: profileResponse.projects,
+      socials: profileResponse.socials,
+      experiences: profileResponse.experiences,
     },
   };
 };

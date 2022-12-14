@@ -27,7 +27,7 @@ export const Projects = ({ projects }: Props) => {
             key={project.name}
             className="w-screen shrink-0 snap-center flex flex-col space-y-5 items-center justify-start p-20 md:p-44 h-screen"
           >
-            <a href={project.link} type="_blank">
+            <a href={project.url} type="_blank">
               <motion.img
                 initial={{ y: -300, opacity: 0 }}
                 transition={{ duration: 1.2 }}
