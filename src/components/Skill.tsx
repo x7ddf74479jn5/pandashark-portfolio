@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
+import type { Skill as TSkill } from "@/types";
 
 type Props = {
   directionLeft?: boolean;
-  skill: Skill;
+  skill: TSkill;
 };
 export const Skill = ({ directionLeft, skill }: Props) => {
   return (

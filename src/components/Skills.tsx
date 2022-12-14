@@ -1,8 +1,9 @@
 import { Skill } from "@/components/Skill";
 import { motion } from "framer-motion";
+import type { Skill as TSkill } from "@/types";
 
 type Props = {
-  skills: Skill[];
+  skills: TSkill[];
 };
 
 export const Skills = ({ skills }: Props) => {

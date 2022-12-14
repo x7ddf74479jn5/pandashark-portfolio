@@ -1,3 +1,4 @@
+import type { PageInfo } from "@/types";
 import { motion } from "framer-motion";
 type Props = {
   pageInfo: PageInfo;
@@ -34,7 +35,7 @@ export const About = ({ pageInfo }: Props) => {
         viewport={{
           once: true,
         }}
-        src={pageInfo?.profilePic.url}
+        src="/images/cafe-latte/webp"
         className="mt-36 md:h-96 -mb-20 md:mb-0 flex shrink-0 w-56 h-56 rounded-full object-cover xl:object-right md:rounded-lg md:w-64 xl:w-[500px] xl:h-[600px]"
       />
 
@@ -42,7 +43,7 @@ export const About = ({ pageInfo }: Props) => {
         <h4 className="text-4xl font-semibold ">
           Here is a <span className="underline decoration-[#F7AB0A]/50">little</span> background
         </h4>
-        <p className="text-base">{pageInfo?.backgroundInformation}</p>
+        <p className="text-base">{pageInfo?.background}</p>
       </div>
     </motion.div>
   );

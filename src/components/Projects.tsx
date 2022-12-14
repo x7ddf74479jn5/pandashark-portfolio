@@ -1,3 +1,4 @@
+import type { Project } from "@/types";
 import { motion } from "framer-motion";
 
 type Props = {
@@ -23,10 +24,10 @@ export const Projects = ({ projects }: Props) => {
       <div className="relative mt-36 flex w-full overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-track-gray-400/20 scrollbar-thin scrollbar-thumb-[#F7AB0A]/80">
         {projects.map((project, i) => (
           <div
-            key={project.id}
+            key={project.name}
             className="w-screen shrink-0 snap-center flex flex-col space-y-5 items-center justify-start p-20 md:p-44 h-screen"
           >
-            <a href={project.linkToBuild} type="_blank">
+            <a href={project.link} type="_blank">
               <motion.img
                 initial={{ y: -300, opacity: 0 }}
                 transition={{ duration: 1.2 }}
@@ -43,7 +44,7 @@ export const Projects = ({ projects }: Props) => {
                 <span className="underline decoration-[#F7AB0A]/50">
                   Case Study {i + 1} of {projects.length}:
                 </span>{" "}
-                {project.title}
+                {project.name}
               </h4>
 
               <div className="flex items-center space-x-2 justify-center">

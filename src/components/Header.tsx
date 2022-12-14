@@ -1,3 +1,4 @@
+import type { Social } from "@/types";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { SocialIcon } from "react-social-icons";
@@ -24,8 +25,8 @@ export const Header = ({ socials }: Props) => {
         }}
         className="flex flex-row items-center"
       >
-        {socials.map(({ id, url }) => (
-          <SocialIcon key={id} className="cursor-pointer" url={url} fgColor="gray" bgColor="transparent" />
+        {socials.map(({ name, link }) => (
+          <SocialIcon key={name} className="cursor-pointer" url={link} fgColor="gray" bgColor="transparent" />
         ))}
       </motion.div>
 

@@ -1,4 +1,5 @@
 import { BackgroundCircles } from "@/components/BackgroundCircles";
+import type { PageInfo } from "@/types";
 import Link from "next/link";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 
