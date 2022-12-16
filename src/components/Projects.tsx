@@ -36,6 +36,7 @@ export const Projects = ({ projects }: Props) => {
                 src={project.image.url}
                 alt=""
                 className="w-80 h-48 md:w-96 md:h-64 -mt-16"
+                loading="lazy"
               />
             </a>
 
