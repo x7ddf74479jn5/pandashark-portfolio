@@ -26,7 +26,7 @@ export const ContactMe = ({ pageInfo }: Props) => {
 
       <div className="flex flex-col space-y-10 mt-36">
         <h4 className="text-4xl font-semibold text-center">
-          I have got just what you need. <span className="decoration-[#F7AB0A]/50 underline">Let&apos;s Talk</span>
+          御用の方は下記フォームへ。 <span className="decoration-[#F7AB0A]/50 underline">Let&apos;s Talk</span>
         </h4>
       </div>
 
@@ -39,15 +39,15 @@ export const ContactMe = ({ pageInfo }: Props) => {
 
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 w-full md:w-fit mx-auto">
         <div className="flex flex-col space-y-2 md:flex-row md:space-x-2 md:space-y-0">
-          <input {...register("name")} placeholder="Name" className="contactInput" type="text" />
+          <input {...register("name")} placeholder="名前 " className="contactInput" type="text" />
           <input {...register("email")} placeholder="Email" className="contactInput" type="email" />
         </div>
 
-        <input {...register("subject")} placeholder="Subject" className="contactInput" type="text" name="" id="" />
+        <input {...register("subject")} placeholder="題" className="contactInput" type="text" name="" id="" />
 
-        <textarea {...register("message")} placeholder="Message" className="contactInput" />
+        <textarea {...register("message")} placeholder="メッセージ" className="contactInput" />
         <button type="submit" className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg">
-          Submit
+          送信する
         </button>
       </form>
     </div>

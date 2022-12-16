@@ -24,7 +24,7 @@ export const Skills = ({ skills }: Props) => {
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">Skills</h3>
 
       <h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm">
-        Hover over a skill for currency proficiency
+        ホバーで現在の熟練度が表示されます
       </h3>
 
       <div className="grid grid-cols-5 md:grid-cols-6 gap-5 mt-36">
