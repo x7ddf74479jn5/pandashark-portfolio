@@ -27,7 +27,7 @@ export const About = ({ pageInfo }: Props) => {
         <p className="text-left indent-4 leading-relaxed md:leading-loose">{pageInfo?.background}</p>
       </div>
       <img
-        src="/images/seamless_pattern_with_shark_fin_in_ocean_wave_generated.jpg"
+        src="/images/shark_fin_pattern.webp"
         alt=""
         className="absolute top-1/4 -z-10 opacity-10 object-cover backdrop-grayscale"
       />
