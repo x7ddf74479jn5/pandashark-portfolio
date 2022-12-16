@@ -46,7 +46,9 @@ export const Header = ({ socials }: Props) => {
         className="flex flex-row items-center text-gray-300 cursor-pointer mr-4"
       >
         <SocialIcon className="cursor-pointer" url="#contact" network="email" fgColor="gray" bgColor="transparent" />
-        <p className="uppercase hidden md:inline-flex text-sm text-gray-400">Contact</p>
+        <a href="#contact" className="uppercase hidden md:inline-flex text-sm text-gray-400">
+          Contact
+        </a>
       </motion.div>
     </header>
   );
