@@ -26,7 +26,7 @@ const Home: NextPage<Props> = ({ pageInfo, skills, experiences, projects, social
       <Head>
         <title>{pageInfo.name}&apos;s Portfolio</title>
         <meta name="description" content={`${pageInfo.name}&apos;s Portfolio`} />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </Head>
 
       <Header socials={socials} />
