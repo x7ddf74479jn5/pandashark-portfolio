@@ -24,7 +24,7 @@ export const ExperienceCard = ({ experience }: Props) => {
           y: 0,
         }}
         viewport={{ once: true }}
-        src={experience?.image.url}
+        src={experience.image.url}
         alt=""
         className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
       />

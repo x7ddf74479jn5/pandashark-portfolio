@@ -16,7 +16,7 @@ type Experience = {
   company: string;
   image: MicroCMSImage;
   dateStarted: string;
-  dateEnd: string;
+  dateEnd?: string;
   current: boolean;
   points: {
     point: string;

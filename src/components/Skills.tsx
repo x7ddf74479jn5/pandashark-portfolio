@@ -7,7 +7,6 @@ type Props = {
 };
 
 export const Skills = ({ skills }: Props) => {
-  console.log(skills);
   return (
     <motion.div
       initial={{

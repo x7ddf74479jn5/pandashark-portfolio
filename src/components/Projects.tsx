@@ -35,9 +35,11 @@ export const Projects = ({ projects }: Props) => {
                 viewport={{ once: true }}
                 src={project.image.url}
                 alt=""
+                className="w-80 h-48 md:w-96 md:h-64 -mt-16"
               />
             </a>
 
+            <div className="space-y-5 px-0 md:px-10 max-w-6xl">
               <h4 className="text-4xl font-semibold text-center">
                 <span className="underline decoration-[#F7AB0A]/50">
                   {i + 1} of {projects.length}:
